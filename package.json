@@ -1,0 +1,25 @@
+{
+  "name": "two-cards-partners",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=/two-cards-partners/ --emptyOutDir",
+    "watch": "npx vite build --watch --emptyOutDir",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.22",
+    "glob": "^13.0.0",
+    "postcss": "^8.5.6",
+    "sass": "^1.95.1",
+    "vite": "^7.2.4",
+    "vite-plugin-full-reload": "^1.2.0",
+    "vite-plugin-html-inject": "^1.1.2",
+    "vite-plugin-image-optimizer": "^2.0.3"
+  },
+  "dependencies": {
+    "sharp": "^0.34.5"
+  }
+}
