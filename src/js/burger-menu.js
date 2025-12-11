@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const burgerMenu = document.querySelector(".burger-menu-btn");
-  const closeMenu = document.querySelector(".burger-menu-btn-close");
+  const burgerMenu = document.querySelector(".burger-btn");
+  const closeMenu = document.querySelector(".burger-btn-close");
   const navMenu = document.querySelector(".header-nav");
   const navLinks = document.querySelectorAll(".nav-link");
 
