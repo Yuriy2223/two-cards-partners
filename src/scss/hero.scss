@@ -1,134 +1,147 @@
 @use "./common/index" as *;
 
 .hero-section {
-  padding-top: 50px;
-  background: linear-gradient(180deg, #0f6691 0%, #024d55 100%);
+  // background-image: url(/images/hero-bg-phone.png);
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+
   @include media(desktop) {
-    background: linear-gradient(180deg, #0f6691 0%, #024d55 100%);
-    padding: 130px 0 26px;
+    // background-image: url(/images/hero-bg.png);
   }
 }
+
 .hero-container {
-  border-radius: 40px;
-  width: 288px;
-  padding: 36px 23px 28px 23px;
   margin: 0 auto;
+  max-width: 1920px;
+  padding-top: 60px;
+  height: 700px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   position: relative;
-  background-image: url(/images/hero/hero-background-mob.webp);
+
+  background-image: url(/images/hero-bg-phone.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
   @include media(desktop) {
-    border-radius: 100px;
-    width: 1056px;
-    padding: 145px 90px 137px 90px;
-    background-image: url(/images/hero/hero-backround-1200.webp);
+    background-image: url(/images/hero-bg.png);
+    height: 900px;
+    padding-top: 330px;
   }
 }
-.hero-title {
-  font-family: $font-family-second;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 1.08;
-  color: $color-dark-brown;
-  width: 229px;
-  margin-bottom: 20px;
+
+.wrapper-hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 344px;
+  z-index: 1;
+
   @include media(desktop) {
-    font-size: 64px;
-    line-height: 1.3;
-    width: 488px;
-    margin-bottom: 28px;
+    width: 828px;
+  }
+}
+
+.hero-title {
+  font-family: $second-family;
+  font-weight: 600;
+  font-size: 46px;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+  background: linear-gradient(
+    90deg,
+    #d8940b 0%,
+    #eeb83a 35.1%,
+    #fff6a7 49.52%,
+    #dda41f 75.49%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 4px 5px 10px 0 rgba(244, 208, 100, 0.3);
+
+  @include media(desktop) {
+    font-size: 70px;
   }
 }
 .hero-text {
-  font-family: $font-family-second;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  color: $color-dark-brown;
-  margin-bottom: 50px;
-  width: 186px;
+  font-family: $second-family;
+  font-weight: 600;
+  font-size: 46px;
+  line-height: 1;
+  text-align: center;
+  color: #fff;
+
   @include media(desktop) {
-    font-size: 32px;
-    width: 410px;
-    margin-bottom: 88px;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 120%;
+    text-align: center;
+    color: #fff;
   }
 }
-.btn-google-play {
-  border-radius: 12px;
-  padding: 4px 40px;
-  gap: 18px;
-  width: 204px;
+.btn-start {
+  font-family: $font-family;
+  font-weight: 800;
+  font-size: 15px;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 100px;
+  width: 344px;
   height: 50px;
-  box-shadow: 0 0 20px 8px rgba(167, 139, 1, 0.8);
-  background: $color-button;
-  border: none;
-  display: flex;
-  align-items: center;
-  transition: all 300ms ease;
-  margin: 0 auto;
+  text-align: center;
 
-  &:hover,
-  &:active {
-    transform: scale(0.9);
-    box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.8);
+  margin-top: 32px;
+
+  box-shadow: 0 0 30px 0 rgba(137, 53, 225, 0.5),
+    0 6px 30px 0 rgba(69, 5, 183, 0.4), 0 4px 4px 0 rgba(48, 0, 134, 0.3),
+    inset 4px 4px 10px 0 rgba(255, 255, 255, 0.45),
+    inset -6px -4px 10px 0 rgba(0, 0, 0, 0.45);
+  background: linear-gradient(135deg, #990aff 0%, #490eb7 100%);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(0.96);
   }
 
   @include media(desktop) {
-    padding: 30px 18px;
-    width: 190px;
-    height: 68px;
-    margin: 0;
+    font-size: 20px;
+    width: 220px;
+    height: 60px;
+    margin-top: 50px;
   }
 }
-.btn-img-google-play {
-  width: 20px;
-  height: 21px;
-}
-.btn-text-google-play {
-  width: 82px;
-  height: 36px;
-  font-family: $font-family-tertiary;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.5;
-  color: #000;
 
-  span {
-    font-weight: 700;
-    @include media(desktop) {
-      font-size: 20px;
-    }
-  }
-
-  @include media(desktop) {
-    font-size: 18px;
-    width: 116px;
-    height: 56px;
-  }
-}
-.hero-img-girl {
-  width: 104px;
-  height: 122px;
+.hero-img-wrap {
   position: absolute;
-  right: 1px;
-  bottom: 68px;
-  z-index: 1;
+  top: 27%;
+  right: 50%;
+  transform: translate(50%, -50%);
+
   @include media(desktop) {
-    width: 368px;
-    height: 434px;
-    top: 100px;
-    right: 120px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
   }
 }
-.hero-img-arrow {
-  display: none;
+.hero-img {
+  width: 312px;
+  height: 250px;
+
   @include media(desktop) {
-    display: block;
-    width: 614px;
-    height: 322px;
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
+    height: 100%;
+    width: 100%;
+    // object-fit: cover;
+    object-fit: contain;
   }
 }

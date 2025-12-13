@@ -1,0 +1,51 @@
+@use "./common/index" as *;
+
+.goal {
+  padding: 60px 0;
+
+  @include media(desktop) {
+    padding: 80px 0;
+  }
+}
+
+.goal-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: linear-gradient(0deg, #1c1f22 0%, rgba(28, 31, 34, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+
+  padding: 24px 16px 0;
+
+  @include media(desktop) {
+    flex-direction: row;
+    justify-content: start;
+    gap: 0;
+    padding: 40px 0px 40px 40px;
+  }
+}
+
+.goal-wrapper-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include media(desktop) {
+    width: 540px;
+  }
+}
+
+.goal-wrapper-img {
+  // width: 100%;
+  @include media(desktop) {
+    position: absolute;
+    width: 410px;
+    bottom: 0;
+    right: 0;
+    top: auto;
+  }
+}
+// .goal-img {
+// }
