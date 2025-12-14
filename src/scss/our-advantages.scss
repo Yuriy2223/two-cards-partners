@@ -1,0 +1,176 @@
+@use "./common/index" as *;
+
+.advantages {
+  // padding-top: 50px;
+  // padding-bottom: 50px;
+
+  @include media(desktop) {
+    // padding-top: 100px;
+    // padding-bottom: 100px;
+  }
+}
+
+.advantages-list {
+  display: flex;
+  flex-direction: column;
+
+  @include media(desktop) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.advantages-item {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 16px;
+  display: flex;
+  gap: 10px;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: #8d43ff;
+  }
+
+  @include media(desktop) {
+    flex-direction: column;
+    padding: 24px;
+    gap: 20px;
+  }
+}
+
+.wrap-title-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include media(desktop) {
+    gap: 16px;
+  }
+}
+
+.advantages-item--footer {
+  flex-direction: column;
+  text-align: center;
+  gap: 12px;
+
+  @include media(desktop) {
+    flex-direction: column;
+    padding: 52px 24px;
+    gap: 20px;
+  }
+}
+
+.advantages-icon {
+  width: 40px;
+  height: 40px;
+
+  @include media(desktop) {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.advantages-subtitle {
+  font-family: $second-family;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: $color-white;
+
+  @include media(desktop) {
+    font-size: 28px;
+  }
+}
+
+.advantages-text {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.4;
+  color: $color-white;
+
+  @include media(desktop) {
+    font-size: 15px;
+  }
+}
+
+.advantages-footer-title {
+  font-family: $second-family;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  background: linear-gradient(
+    90deg,
+    #d8940b 0%,
+    #eeb83a 35.1%,
+    #fff6a7 49.52%,
+    #dda41f 75.49%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: -1px -2px 10px 0 rgba(244, 208, 100, 0.4);
+
+  @include media(desktop) {
+    font-size: 32px;
+  }
+}
+
+.advantages-footer-text {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+
+  color: $color-white;
+
+  @include media(desktop) {
+    font-size: 15px;
+  }
+}
+
+.advantages-footer-subtext {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  color: $color-white;
+
+  @include media(desktop) {
+    font-size: 13px;
+  }
+}
+
+.btn-contact {
+  font-family: $font-family;
+  font-weight: 800;
+  font-size: 15px;
+  color: $color-white;
+
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 100px;
+
+  width: 311px;
+  height: 50px;
+
+  box-shadow: 0 0 30px 0 rgba(137, 53, 225, 0.5),
+    0 6px 30px 0 rgba(69, 5, 183, 0.4), 0 4px 4px 0 rgba(48, 0, 134, 0.3),
+    inset 4px 4px 10px 0 rgba(255, 255, 255, 0.45),
+    inset -6px -4px 10px 0 rgba(0, 0, 0, 0.45);
+  background: linear-gradient(135deg, #990aff 0%, #490eb7 100%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  @include media(desktop) {
+    font-size: 18px;
+    padding: 18px 60px;
+  }
+}

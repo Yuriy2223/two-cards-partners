@@ -1,11 +1,11 @@
 @use "./common/index" as *;
 
 .goal {
-  padding: 60px 0;
+  // padding: 60px 0;
 
-  @include media(desktop) {
-    padding: 80px 0;
-  }
+  // @include media(desktop) {
+  //   padding: 80px 0;
+  // }
 }
 
 .goal-container {
@@ -25,6 +25,9 @@
     gap: 0;
     padding: 40px 0px 40px 40px;
   }
+}
+.goal-title {
+  margin-bottom: 0;
 }
 
 .goal-wrapper-text {
