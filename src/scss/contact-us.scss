@@ -1,0 +1,318 @@
+@use "./common/index" as *;
+
+.contact {
+  @include media(desktop) {
+  }
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include media(desktop) {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    align-items: flex-start;
+  }
+}
+
+.contact-content {
+  @include media(desktop) {
+    flex: 1;
+    max-width: 500px;
+  }
+}
+
+.contact-title {
+  font-family: $second-family;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.2;
+  color: $color-white;
+  margin-bottom: 16px;
+
+  @include media(desktop) {
+    font-size: 56px;
+    margin-bottom: 20px;
+  }
+}
+
+.contact-text {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 32px;
+
+  @include media(desktop) {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+}
+
+.contact-features {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: rgba(153, 10, 255, 0.1);
+  border: 1px solid rgba(153, 10, 255, 0.3);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 32px;
+
+  @include media(desktop) {
+    gap: 24px;
+    padding: 20px 24px;
+    margin-bottom: 40px;
+  }
+}
+
+.contact-feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  @include media(desktop) {
+    gap: 12px;
+  }
+}
+
+.contact-feature-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  @include media(desktop) {
+    width: 40px;
+    height: 40px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.contact-feature-text {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.4;
+  color: $color-white;
+
+  @include media(desktop) {
+    font-size: 15px;
+  }
+}
+
+.contact-form {
+  background: rgba(28, 31, 34, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 32px 24px;
+
+  @include media(desktop) {
+    padding: 40px;
+    flex: 1;
+    max-width: 500px;
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+
+  @include media(desktop) {
+    margin-bottom: 24px;
+  }
+}
+
+.form-label {
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 14px;
+  color: $color-white;
+  margin-bottom: 8px;
+  display: block;
+
+  span {
+    background: linear-gradient(
+      90deg,
+      #d8940b 0%,
+      #eeb83a 35.1%,
+      #fff6a7 49.52%,
+      #dda41f 75.49%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @include media(desktop) {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 14px;
+  color: $color-white;
+  transition: border-color 0.3s ease;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: rgba(153, 10, 255, 0.5);
+  }
+
+  @include media(desktop) {
+    font-size: 16px;
+    padding: 16px 20px;
+  }
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 24px;
+
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    cursor: pointer;
+  }
+
+  label {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+
+    @include media(desktop) {
+      font-size: 14px;
+    }
+  }
+
+  @include media(desktop) {
+    margin-bottom: 32px;
+  }
+}
+
+.form-submit {
+  width: 100%;
+  font-family: $font-family;
+  font-weight: 800;
+  font-size: 16px;
+  color: $color-white;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 100px;
+  padding: 16px;
+  box-shadow: 0 0 30px 0 rgba(137, 53, 225, 0.5),
+    0 6px 30px 0 rgba(69, 5, 183, 0.4), 0 4px 4px 0 rgba(48, 0, 134, 0.3),
+    inset 4px 4px 10px 0 rgba(255, 255, 255, 0.45),
+    inset -6px -4px 10px 0 rgba(0, 0, 0, 0.45);
+  background: linear-gradient(135deg, #990aff 0%, #490eb7 100%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 24px;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 40px 0 rgba(137, 53, 225, 0.7),
+      0 8px 35px 0 rgba(69, 5, 183, 0.5);
+  }
+
+  @include media(desktop) {
+    font-size: 20px;
+    padding: 18px;
+    margin-bottom: 32px;
+  }
+}
+
+.form-footer {
+  text-align: center;
+}
+
+.form-footer-text {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 16px;
+
+  @include media(desktop) {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+
+.form-socials {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+
+  @include media(desktop) {
+    gap: 16px;
+  }
+}
+
+.form-social-link {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #990aff 0%, #490eb7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  @include media(desktop) {
+    width: 56px;
+    height: 56px;
+
+    svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
+}
