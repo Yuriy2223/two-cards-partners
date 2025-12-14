@@ -1,0 +1,161 @@
+@use "./common/index" as *;
+
+.testimonials {
+  @include media(desktop) {
+  }
+}
+
+.testimonials-wrapper {
+  position: relative;
+  margin-top: 40px;
+
+  @include media(desktop) {
+    margin-top: 60px;
+  }
+}
+
+.testimonials-swiper {
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonials-slide {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px 16px;
+  background: linear-gradient(0deg, #1c1f22 0%, rgba(28, 31, 34, 0.02) 100%);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  @include media(desktop) {
+    padding: 24px;
+  }
+}
+
+.testimonials-name {
+  font-family: $second-family;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: $color-white;
+  margin-bottom: 12px;
+
+  @include media(desktop) {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+}
+
+.testimonials-text {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.4;
+  color: $color-white;
+  margin-bottom: 16px;
+  flex-grow: 1;
+
+  @include media(desktop) {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+}
+
+.testimonials-logo {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px 20px;
+  width: 140px;
+  height: 66px;
+  background: #0d0a0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include media(desktop) {
+    width: 199px;
+    height: 100px;
+  }
+}
+
+.testimonials-logo-text {
+  font-family: $second-family;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.2;
+  color: $color-white;
+  text-transform: uppercase;
+
+  @include media(desktop) {
+    font-size: 32px;
+  }
+}
+
+.testimonials-wrapper {
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 2px 0 rgba(10, 13, 18, 0.05),
+      inset 0 -2px 0 0 rgba(10, 13, 18, 0.05),
+      inset 0 0 0 1px rgba(10, 13, 18, 0.18);
+    background: #1c1f22;
+    color: $color-white;
+    transition: all 0.3s ease;
+    z-index: 10;
+    cursor: pointer;
+    margin: 0 !important;
+
+    &::after {
+      content: none;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: $color-white;
+
+      @include media(desktop) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &:hover {
+      background: rgba(153, 10, 255, 0.5);
+      border-color: $color-white;
+    }
+
+    @include media(desktop) {
+      width: 56px !important;
+      height: 56px !important;
+    }
+  }
+
+  .swiper-button-prev {
+    left: -12px !important;
+    right: auto !important;
+
+    @include media(desktop) {
+      left: -26px !important;
+    }
+  }
+
+  .swiper-button-next {
+    right: -12px !important;
+    left: auto !important;
+
+    @include media(desktop) {
+      right: -26px !important;
+    }
+  }
+}
