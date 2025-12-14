@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>TwoCards Partners</title>
+    <script type="module" crossorigin src="/two-cards-partners/assets/index-Dyq7j02u.js"></script>
+    <link rel="stylesheet" crossorigin href="/two-cards-partners/assets/index-CvupCM8f.css">
+  </head>
+  <body>
+    <section class="header-section">
+  <div class="header-container">
+    <a href="./index.html" class="logo-link">
+      <picture>
+        <source srcset="/two-cards-partners/assets/logo-desktop-CzAXJfpn.png" media="(min-width: 768px)" />
+        <source srcset="data:image/png;base64,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" media="(min-width: 320px)" />
+        <img src="data:image/png;base64,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" alt="logo" class="logo-img" />
+      </picture>
+    </a>
+
+    <button class="burger-btn" type="button" aria-label="Menu">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M3 12H21M3 6H21M3 18H21"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+    </button>
+
+    <nav class="header-nav">
+      <div class="nav-header">
+        <a href="./index.html" class="logo-link-mobile">
+          <img
+            src="data:image/png;base64,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"
+            alt="logo"
+            class="logo-img-mobile"
+          />
+        </a>
+        <button class="burger-btn-close" type="button" aria-label="Close">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M18 6L6 18M6 6L18 18"
+              stroke="#8B5CF6"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <ul class="nav-list">
+        <li class="nav-item">
+          <span class="nav-number">01 /</span>
+          <a href="#goal" class="nav-link">Goal</a>
+        </li>
+        <li class="nav-item">
+          <span class="nav-number">02 / </span>
+          <a href="#advantages" class="nav-link">Advantages</a>
+        </li>
+        <li class="nav-item">
+          <span class="nav-number">03 /</span>
+          <a href="#commissions" class="nav-link">Commissions</a>
+        </li>
+        <li class="nav-item">
+          <span class="nav-number">04 /</span>
+          <a href="#testimonials" class="nav-link">Testimonials</a>
+        </li>
+        <li class="nav-item">
+          <span class="nav-number">05 /</span>
+          <a href="#faq" class="nav-link">FAQ</a>
+        </li>
+      </ul>
+
+      <div class="burger-img">
+        <img src="/two-cards-partners/assets/burger-img-GQdLt_Dk.png" alt="decorative smoke" />
+      </div>
+
+      <div class="header-actions-mobile">
+        <button class="btn-login">Log in</button>
+        <button class="btn-register">Registration</button>
+      </div>
+    </nav>
+
+    <div class="header-actions-desktop">
+      <button class="btn-login">Log in</button>
+      <button class="btn-register">Registration</button>
+    </div>
+  </div>
+</section>
+
+    <section id="hero" class="hero-section">
+  <div class="hero-container">
+    <div class="wrapper-hero-text">
+      <h1 class="hero-title">TwoCards Partners</h1>
+      <p class="hero-text">Turn your traffic into profit</p>
+      <button class="btn-start" type="button">Let's start</button>
+    </div>
+    <div class="hero-img-wrap">
+      <picture>
+        <source srcset="/two-cards-partners/assets/hero-img-BGpYohAO.png" media="(min-width: 1000px)" />
+        <img
+          src="/two-cards-partners/assets/hero-img-phone-two-DRMihRES.png"
+          alt="Casino characters"
+          class="hero-img"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+    <main>
+      <section id="goal" class="goal">
+  <div class="container">
+    <div class="goal-container">
+      <div class="goal-wrapper-text">
+        <h2 class="title goal-title">Our Goal</h2>
+        <p class="text">
+          Is to build long-term,<span>win-win</span> partnerships based on
+          <span>trust</span>, transparency, and mutual <span>growth</span>.
+        </p>
+        <p class="text">
+          <span>Your success</span> is our success — we’re here to support you
+          every step of the way.
+        </p>
+      </div>
+      <div class="goal-wrapper-img">
+        <picture>
+          <source srcset="/two-cards-partners/assets/our-goal-BILTv6Tx.png" media="(min-width: 1110px)" />
+          <img
+            src="/two-cards-partners/assets/our-goal-phone-DwaK0yt8.png"
+            alt="Our goal illustration"
+            class="goal-img"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section id="advantages" class="advantages">
+  <div class="container">
+    <div class="advantages-container">
+      <h2 class="title">Our Advantages</h2>
+
+      <ul class="advantages-list">
+        <li class="advantages-item">
+          <img
+            src="/two-cards-partners/assets/advantages-%D1%81oin-wh9nv6B4.png"
+            alt="Coin"
+            class="advantages-icon"
+          />
+          <div class="wrap-title-text">
+            <h3 class="advantages-subtitle">
+              Fast, Secure, and Instant Payouts
+            </h3>
+
+            <p class="advantages-text">
+              We offer reliable, partner-friendly payout solutions, including
+              USDT, BTC, and local bank transfers. With multiple withdrawal
+              options and zero delays, you're always in control of your earnings
+              — efficiently and securely.
+            </p>
+          </div>
+        </li>
+
+        <li class="advantages-item">
+          <img
+            src="/two-cards-partners/assets/advantages-rocket-CgFeF-tL.png"
+            alt="Rocket"
+            class="advantages-icon"
+          />
+          <div class="wrap-title-text">
+            <h3 class="advantages-subtitle">
+              Boost Your Marketing Power with Smarter Tools
+            </h3>
+
+            <p class="advantages-text">
+              Unlock high-performing marketing tools: premium banners,
+              conversion-optimized landing pages, and tracking links — all ready
+              for testing. Combined with real-time analytics, our tools help you
+              optimize your strategy and boost ROI at every step.
+            </p>
+          </div>
+        </li>
+
+        <li class="advantages-item">
+          <img
+            src="/two-cards-partners/assets/advantages-cards-BgfadDs-.png"
+            alt="Cards"
+            class="advantages-icon"
+          />
+          <div class="wrap-title-text">
+            <h3 class="advantages-subtitle">
+              Casino and Betting — United for Maximum Profit
+            </h3>
+
+            <p class="advantages-text">
+              TwoCards Partners is a place where Casino and Betting come
+              together to deliver more entertainment, and more profit. Make
+              money, enjoy the process, and grow with us.
+            </p>
+          </div>
+        </li>
+
+        <li class="advantages-item">
+          <img
+            src="/two-cards-partners/assets/advantages-star-Bt_yxH9P.png"
+            alt="Star"
+            class="advantages-icon"
+          />
+          <div class="wrap-title-text">
+            <h3 class="advantages-subtitle">
+              We Support Your Every Step to Success
+            </h3>
+
+            <p class="advantages-text">
+              No automation. No templates. Just real affiliate managers focused
+              on your success — customizing deals, optimizing tools, and
+              boosting your results. You're always supported
+            </p>
+          </div>
+        </li>
+
+        <li class="advantages-item">
+          <img
+            src="/two-cards-partners/assets/advantages-percent-BHdxUY2-.png"
+            alt="Percent"
+            class="advantages-icon"
+          />
+          <div class="wrap-title-text">
+            <h3 class="advantages-subtitle">
+              Expand Your Network — and Your Income
+            </h3>
+
+            <p class="advantages-text">
+              Boost your income by referring other webmasters to the TwoCards
+              Partners Program. Earn 5% of their revenue and grow your
+              commissions while building a powerful, success-driven affiliate
+              network.
+            </p>
+          </div>
+        </li>
+
+        <li class="advantages-item advantages-item--footer">
+          <h3 class="advantages-footer-title">TwoCards Partners</h3>
+          <p class="advantages-footer-text">
+            Ready to grow with us? Let's talk strategy, commissions, and custom
+            deals.
+          </p>
+          <p class="advantages-footer-subtext">
+            Trusted by 1000+ affiliates worldwide 🌍
+          </p>
+          <button class="btn-contact" type="button">Contact Us</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+      <section id="commissions" class="commissions">
+  <div class="container">
+    <div class="commissions-container">
+      <h2 class="title title-commissions">
+        Commissions <span>Structures</span>
+      </h2>
+
+      <ul class="commissions-list">
+        <li class="commissions-item">
+          <img
+            src="/two-cards-partners/assets/commissions-revenue-305zZjis.png"
+            alt="Revenue"
+            class="commissions-icon"
+          />
+          <div class="commissions-content">
+            <h3 class="subtitle">Revenue Share</h3>
+            <span class="revenue-badge">Up to 50%</span>
+            <p class="text">
+              More traffic, more earnings — it's that simple. No negative
+              carryover. No hidden conditions.
+            </p>
+          </div>
+        </li>
+
+        <li class="commissions-item">
+          <img
+            src="/two-cards-partners/assets/commissions-lock-CVhmoyFn.png"
+            alt="Lock"
+            class="commissions-icon"
+          />
+          <div class="commissions-content">
+            <h3 class="subtitle">CPA Deals</h3>
+            <span class="lock-badge">Up to 500 EUR per player</span>
+            <p class="text">
+              Optimized for high-performance affiliates focused on fast ROI.
+            </p>
+          </div>
+        </li>
+
+        <li class="commissions-item">
+          <img
+            src="/two-cards-partners/assets/commissions-hybrid-D4ZabVVY.png"
+            alt="Hybrid"
+            class="commissions-icon"
+          />
+          <div class="commissions-content">
+            <h3 class="subtitle">Hybrid Offers</h3>
+            <span class="hybrid-badge">Rev Share + CPA</span>
+            <p class="text">
+              Combine both models for maximum flexibility and growth.
+            </p>
+          </div>
+        </li>
+
+        <li class="commissions-item">
+          <img
+            src="/two-cards-partners/assets/commissions-crown-CaWWLcuo.png"
+            alt="Crown"
+            class="commissions-icon"
+          />
+          <div class="commissions-content">
+            <h3 class="subtitle">Special Offers & VIP Deals</h3>
+            <span class="crown-badge"
+              >Exclusive promos and personalized terms</span
+            >
+            <p class="text">
+              Got high-quality traffic? Let's discuss your custom deal.
+            </p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="commissions-footer">
+        <p class="commissions-footer-text">
+          Let's grow together — and earn like never before
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section id="testimonials" class="testimonials">
+  <div class="container">
+    <h2 class="title">Testimonials</h2>
+    <div class="testimonials-wrapper">
+      <div class="swiper testimonials-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide testimonials-slide">
+            <h3 class="testimonials-name">Name</h3>
+            <p class="testimonials-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <div class="testimonials-logo">
+              <span class="testimonials-logo-text">LOGO</span>
+            </div>
+          </div>
+
+          <div class="swiper-slide testimonials-slide">
+            <h3 class="testimonials-name">Name</h3>
+            <p class="testimonials-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <div class="testimonials-logo">
+              <span class="testimonials-logo-text">LOGO</span>
+            </div>
+          </div>
+
+          <div class="swiper-slide testimonials-slide">
+            <h3 class="testimonials-name">Name</h3>
+            <p class="testimonials-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <div class="testimonials-logo">
+              <span class="testimonials-logo-text">LOGO</span>
+            </div>
+          </div>
+
+          <div class="swiper-slide testimonials-slide">
+            <h3 class="testimonials-name">Name</h3>
+            <p class="testimonials-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <div class="testimonials-logo">
+              <span class="testimonials-logo-text">LOGO</span>
+            </div>
+          </div>
+
+          <div class="swiper-slide testimonials-slide">
+            <h3 class="testimonials-name">Name</h3>
+            <p class="testimonials-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <div class="testimonials-logo">
+              <span class="testimonials-logo-text">LOGO</span>
+            </div>
+          </div>
+
+          <div class="swiper-slide testimonials-slide">
+            <h3 class="testimonials-name">Name</h3>
+            <p class="testimonials-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <div class="testimonials-logo">
+              <span class="testimonials-logo-text">LOGO</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3.2656 9.75856C3.22131 9.7868 3.18485 9.82574 3.1596 9.8718C3.13434 9.91786 3.1211 9.96953 3.1211 10.0221C3.1211 10.0746 3.13434 10.1263 3.1596 10.1723C3.18485 10.2184 3.22131 10.2573 3.2656 10.2856L16.5188 18.7351C16.5601 18.7613 16.6092 18.7726 16.6578 18.7673C16.7065 18.7619 16.7519 18.7402 16.7866 18.7057C16.8214 18.6712 16.8434 18.626 16.849 18.5774C16.8547 18.5287 16.8437 18.4796 16.8178 18.4381L11.7096 10.3071C11.656 10.2217 11.6275 10.1229 11.6275 10.0221C11.6275 9.92124 11.656 9.82246 11.7096 9.73707L16.8305 1.58589C16.9783 1.35062 16.7635 1.15299 16.592 1.26233L3.2656 9.75856Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+      <div class="swiper-button-next">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16.7344 10.2414C16.7787 10.2132 16.8151 10.1743 16.8404 10.1282C16.8657 10.0821 16.8789 10.0305 16.8789 9.97794C16.8789 9.92541 16.8657 9.87373 16.8404 9.82767C16.8151 9.78162 16.7787 9.74267 16.7344 9.71443L3.48123 1.26488C3.43985 1.23873 3.39082 1.2274 3.34216 1.23274C3.2935 1.23807 3.24809 1.25977 3.21336 1.29426C3.17863 1.32876 3.15664 1.37403 3.15098 1.42265C3.14531 1.47127 3.15632 1.52038 3.18219 1.56193L8.29039 9.69292C8.34403 9.77831 8.37249 9.87709 8.37249 9.97792C8.37249 10.0788 8.34403 10.1775 8.29039 10.2629L3.16951 18.4141C3.0217 18.6494 3.23652 18.847 3.40802 18.7377L16.7344 10.2414Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section id="faq" class="faq">
+  <div class="container">
+    <h2 class="title">FAQ</h2>
+    <p class="subtitle">
+      Need help? Check out our most frequently asked questions.
+    </p>
+
+    <ul class="faq-list">
+      <li class="faq-item">
+        <button class="faq-question">
+          <span class="faq-question-text">How fast can I get approved?</span>
+          <span class="faq-icon">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.414 6.40622C10.4406 6.38927 10.4625 6.3659 10.4776 6.33827C10.4928 6.31064 10.5007 6.27963 10.5007 6.24811C10.5007 6.21659 10.4928 6.18558 10.4776 6.15795C10.4625 6.13031 10.4406 6.10694 10.414 6.09L2.4618 1.02006C2.43697 1.00437 2.40755 0.997571 2.37835 1.00077C2.34915 1.00398 2.3219 1.01699 2.30107 1.03769C2.28023 1.05839 2.26703 1.08555 2.26363 1.11473C2.26024 1.1439 2.26684 1.17337 2.28236 1.1983L5.34741 6.07709C5.37959 6.12833 5.39667 6.1876 5.39667 6.2481C5.39667 6.3086 5.37959 6.36788 5.34741 6.41911L2.27476 11.31C2.18607 11.4512 2.31496 11.5698 2.41787 11.5042L10.414 6.40622Z"
+                fill="white"
+              />
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <p class="faq-answer-text">
+            Our approval process typically takes 24-48 hours. Once you submit
+            your application, our team will review it and get back to you as
+            soon as possible.
+          </p>
+        </div>
+      </li>
+
+      <li class="faq-item active">
+        <button class="faq-question">
+          <span class="faq-question-text">What is the minimum payout?</span>
+          <span class="faq-icon">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.414 6.40622C10.4406 6.38927 10.4625 6.3659 10.4776 6.33827C10.4928 6.31064 10.5007 6.27963 10.5007 6.24811C10.5007 6.21659 10.4928 6.18558 10.4776 6.15795C10.4625 6.13031 10.4406 6.10694 10.414 6.09L2.4618 1.02006C2.43697 1.00437 2.40755 0.997571 2.37835 1.00077C2.34915 1.00398 2.3219 1.01699 2.30107 1.03769C2.28023 1.05839 2.26703 1.08555 2.26363 1.11473C2.26024 1.1439 2.26684 1.17337 2.28236 1.1983L5.34741 6.07709C5.37959 6.12833 5.39667 6.1876 5.39667 6.2481C5.39667 6.3086 5.37959 6.36788 5.34741 6.41911L2.27476 11.31C2.18607 11.4512 2.31496 11.5698 2.41787 11.5042L10.414 6.40622Z"
+                fill="white"
+              />
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <p class="faq-answer-text">100 USD / 100 USDT</p>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-question">
+          <span class="faq-question-text">Who are TwoCards Partners?</span>
+          <span class="faq-icon">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.414 6.40622C10.4406 6.38927 10.4625 6.3659 10.4776 6.33827C10.4928 6.31064 10.5007 6.27963 10.5007 6.24811C10.5007 6.21659 10.4928 6.18558 10.4776 6.15795C10.4625 6.13031 10.4406 6.10694 10.414 6.09L2.4618 1.02006C2.43697 1.00437 2.40755 0.997571 2.37835 1.00077C2.34915 1.00398 2.3219 1.01699 2.30107 1.03769C2.28023 1.05839 2.26703 1.08555 2.26363 1.11473C2.26024 1.1439 2.26684 1.17337 2.28236 1.1983L5.34741 6.07709C5.37959 6.12833 5.39667 6.1876 5.39667 6.2481C5.39667 6.3086 5.37959 6.36788 5.34741 6.41911L2.27476 11.31C2.18607 11.4512 2.31496 11.5698 2.41787 11.5042L10.414 6.40622Z"
+                fill="white"
+              />
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <p class="faq-answer-text">
+            TwoCards Partners is a leading affiliate program for casino and
+            betting platforms. We provide top-tier marketing tools and
+            competitive commission structures.
+          </p>
+        </div>
+      </li>
+    </ul>
+
+    <button class="faq-button" type="button">More...</button>
+  </div>
+</section>
+
+      <!-- <section id="contact" class="contact">
+  <div class="container">
+    <div class="contact-content">
+      <h2 class="contact-title">Contact Us</h2>
+      <p class="contact-text">
+        Let's talk strategy, commissions, and custom deals. Fill out the form —
+        we'll be in touch shortly.
+      </p>
+
+      <div class="contact-features">
+        <div class="contact-feature">
+          <div class="contact-feature-icon">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 2L12 7L17 7L13 10L14 15L10 12L6 15L7 10L3 7L8 7L10 2Z"
+                fill="#a855f7"
+              />
+            </svg>
+          </div>
+          <span class="contact-feature-text">Secure form</span>
+        </div>
+
+        <div class="contact-feature">
+          <div class="contact-feature-icon">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 2L12 7L17 7L13 10L14 15L10 12L6 15L7 10L3 7L8 7L10 2Z"
+                fill="#a855f7"
+              />
+            </svg>
+          </div>
+          <span class="contact-feature-text">Fast reply</span>
+        </div>
+
+        <div class="contact-feature">
+          <div class="contact-feature-icon">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 2L12 7L17 7L13 10L14 15L10 12L6 15L7 10L3 7L8 7L10 2Z"
+                fill="#a855f7"
+              />
+            </svg>
+          </div>
+          <span class="contact-feature-text">Response within 24h</span>
+        </div>
+      </div>
+
+      <form class="contact-form">
+        <div class="form-group">
+          <label class="form-label"><span>Name</span></label>
+          <input
+            type="text"
+            class="form-input"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label"><span>E-mail</span></label>
+          <input
+            type="email"
+            class="form-input"
+            placeholder="Enter your e-mail"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label"><span>Telegram</span></label>
+          <input
+            type="text"
+            class="form-input"
+            placeholder="Enter your telegram"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Leave a message</label>
+          <textarea
+            class="form-textarea"
+            placeholder="Enter your message"
+          ></textarea>
+        </div>
+
+        <div class="form-checkbox">
+          <input type="checkbox" id="consent" required />
+          <label for="consent">
+            I consent to TwoCards Partners storing my personal data provided for
+            the sole purpose of responding to my enquiry and administering my
+            request
+          </label>
+        </div>
+
+        <button type="submit" class="form-submit">Send</button>
+
+        <div class="form-footer">
+          <p class="form-footer-text">Or text to our support service</p>
+          <div class="form-socials">
+            <a href="#" class="form-social-link">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+            <a href="#" class="form-social-link">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+            <a href="#" class="form-social-link">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+ -->
+    </main>
+    <!-- <footer class="footer">
+  <div class="container">
+    <div class="footer-container">
+      <p class="footer-copyright">
+        © 2025 Twocards partners. All rights reserved.
+      </p>
+
+      <div class="footer-links">
+        <a href="#" class="footer-link">Terms and Conditions</a>
+        <a href="#" class="footer-link">Privacy Policy</a>
+      </div>
+
+      <div class="footer-socials-wrapper">
+        <span class="footer-socials-text">Social links:</span>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z"
+                fill="white"
+              />
+            </svg>
+          </a>
+          <a href="#" class="footer-social-link">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z"
+                fill="white"
+              />
+            </svg>
+          </a>
+          <a href="#" class="footer-social-link">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z"
+                fill="white"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+ -->
+
+  </body>
+</html>
