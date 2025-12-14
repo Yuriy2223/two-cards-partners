@@ -1,19 +1,17 @@
-document.querySelectorAll(".faq-item").forEach((item) => {
-  item.addEventListener("click", () => {
-    document.querySelectorAll(".faq-item.open").forEach((openItem) => {
-      if (openItem !== item) {
-        openItem.classList.remove("open");
-        openItem.querySelector(".faq-toggle").textContent = "+";
-      }
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach((item) => {
+  const question = item.querySelector(".faq-question");
+
+  question.addEventListener("click", () => {
+    const isActive = item.classList.contains("active");
+
+    faqItems.forEach((otherItem) => {
+      otherItem.classList.remove("active");
     });
 
-    const toggle = item.querySelector(".faq-toggle");
-    if (item.classList.contains("open")) {
-      item.classList.remove("open");
-      toggle.textContent = "+";
-    } else {
-      item.classList.add("open");
-      toggle.textContent = "-";
+    if (!isActive) {
+      item.classList.add("active");
     }
   });
 });
