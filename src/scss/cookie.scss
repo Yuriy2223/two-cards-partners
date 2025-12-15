@@ -1,0 +1,122 @@
+@use "./common/index" as *;
+
+.cookie-popup {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 16px;
+  width: 343px;
+  height: 297px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  background: rgba(0, 0, 0, 0.6);
+  animation: slideUp 0.3s ease-out;
+
+  @include media(desktop) {
+    flex-direction: row;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    width: 440px;
+    height: 319px;
+    left: auto;
+    right: 24px;
+    bottom: 24px;
+    transform: none;
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.cookie-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+
+  @include media(desktop) {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 12px;
+  }
+}
+.cookie-title {
+  font-family: $second-family;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  color: $color-white;
+  margin-bottom: 8px;
+
+  @include media(desktop) {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+}
+.cookie-text {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.4;
+  color: $color-white;
+  margin-bottom: 16px;
+
+  @include media(desktop) {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+}
+.cookie-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include media(desktop) {
+    flex-direction: row;
+  }
+}
+.btn-learn,
+.btn-accept {
+  font-family: $font-family;
+  font-weight: 800;
+  font-size: 15px;
+  color: $color-white;
+  padding: 13px 20px;
+  width: 1;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+
+  @include media(desktop) {
+    font-size: 20px;
+    padding: 18px 24px;
+    width: 191px;
+    height: 60px;
+  }
+}
+
+.btn-learn {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: #1c1f22;
+
+  &:hover {
+    background: #3a3a4e;
+  }
+}
+
+.btn-accept {
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 30px 0 rgba(137, 53, 225, 0.5),
+    0 6px 30px 0 rgba(69, 5, 183, 0.4), 0 4px 4px 0 rgba(48, 0, 134, 0.3),
+    inset 4px 4px 10px 0 rgba(255, 255, 255, 0.45),
+    inset -6px -4px 10px 0 rgba(0, 0, 0, 0.45);
+  background: linear-gradient(135deg, #990aff 0%, #490eb7 100%);
+
+  &:hover {
+    background: linear-gradient(135deg, #b31aff 0%, #5c12c4 100%);
+  }
+}

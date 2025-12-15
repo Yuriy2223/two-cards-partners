@@ -119,6 +119,12 @@
     border-bottom: none;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
     padding: 0;
+    padding-right: 10px;
+
+    &:last-child {
+      padding-right: none;
+      border-right: none;
+    }
   }
 }
 .contact-feature-text {
