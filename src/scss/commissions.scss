@@ -119,17 +119,17 @@
   font-weight: 600;
   font-size: 30px;
   line-height: 1.2;
-  background: linear-gradient(
-    90deg,
-    #d8940b 0%,
-    #eeb83a 35.1%,
-    #fff6a7 49.52%,
-    #dda41f 75.49%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: -1px -2px 10px 0 rgba(244, 208, 100, 0.4);
+  // background: linear-gradient(
+  //   90deg,
+  //   #d8940b 0%,
+  //   #eeb83a 35.1%,
+  //   #fff6a7 49.52%,
+  //   #dda41f 75.49%
+  // );
+  // background-clip: text;
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
+  // text-shadow: -1px -2px 10px 0 rgba(244, 208, 100, 0.4);
 
   @include media(desktop) {
     font-size: 46px;

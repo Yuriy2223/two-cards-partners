@@ -18,16 +18,18 @@
 
 .header-container {
   width: 100%;
+  min-width: 320px;
   max-width: 1920px;
   margin: 0 auto;
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 16px;
+  padding: 12px 30px;
 
   @include media(desktop) {
-    padding: 20px 40px;
+    // padding: 20px 40px;
+    padding: 20px 34px;
   }
 }
 
@@ -155,19 +157,21 @@
   &:hover {
     background: rgba(139, 92, 246, 0.1);
     padding-left: 12px;
-    border-radius: 8px;
+    // border-radius: 8px;
   }
 
   &:active {
-    background: rgba(139, 92, 246, 0.2);
-    transform: scale(0.98);
+    background: rgba(139, 92, 246, 0.1);
+    // background: rgba(139, 92, 246, 0.2);
+    // transform: scale(0.98);
+    // background-color: #1c1f22;
   }
 
   @include media(desktop) {
     border-bottom: none;
     padding: 0;
     gap: 0;
-    cursor: default;
+    // cursor: default;
 
     &:hover {
       background: none;
@@ -176,9 +180,14 @@
     }
 
     &:active {
-      background: none;
-      transform: none;
+      background: rgba(139, 92, 246, 0.2);
+      transform: scale(0.98);
     }
+
+    // &:active {
+    //   background: none;
+    //   transform: none;
+    // }
   }
 }
 
@@ -266,16 +275,16 @@
 
 .btn-login,
 .btn-register {
-  font-family: $font-family;
-  color: $color-white;
+  // font-family: $font-family;
+  // color: $color-white;
   font-weight: 700;
   font-size: 20px;
   width: 100%;
   padding: 14px 20px;
   border-radius: 100px;
 
-  transition: all 300ms ease;
-  white-space: nowrap;
+  // transition: all 300ms ease;
+  // white-space: nowrap;
 
   @include media(desktop) {
     width: auto;
@@ -283,40 +292,40 @@
     font-size: 14px;
   }
 
-  &:active {
-    transform: scale(0.97);
-  }
+  // &:active {
+  //   transform: scale(0.97);
+  // }
 }
 
-.btn-login {
-  background-color: #1c1f22;
-  color: $color-white;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+// .btn-login {
+//   background-color: #1c1f22;
+//   color: $color-white;
+//   border: 2px solid rgba(255, 255, 255, 0.1);
 
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: translateY(-3px);
-  }
-}
+//   &:hover {
+//     background-color: rgba(255, 255, 255, 0.1);
+//     transform: translateY(-3px);
+//   }
+// }
 
-.btn-register {
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 30px 0 rgba(137, 53, 225, 0.5),
-    0 6px 30px 0 rgba(69, 5, 183, 0.4), 0 4px 4px 0 rgba(48, 0, 134, 0.3),
-    inset 4px 4px 10px 0 rgba(255, 255, 255, 0.45),
-    inset -6px -4px 10px 0 rgba(0, 0, 0, 0.45);
-  background: linear-gradient(135deg, #990aff 0%, #490eb7 100%);
+// .btn-register {
+//   border: 2px solid rgba(255, 255, 255, 0.15);
+//   box-shadow: 0 0 30px 0 rgba(137, 53, 225, 0.5),
+//     0 6px 30px 0 rgba(69, 5, 183, 0.4), 0 4px 4px 0 rgba(48, 0, 134, 0.3),
+//     inset 4px 4px 10px 0 rgba(255, 255, 255, 0.45),
+//     inset -6px -4px 10px 0 rgba(0, 0, 0, 0.45);
+//   background: linear-gradient(135deg, #990aff 0%, #490eb7 100%);
 
-  &:hover {
-    transform: translateY(-3px);
-  }
+//   &:hover {
+//     transform: translateY(-3px);
+//   }
 
-  @include media(desktop) {
-    &:hover {
-      transform: translateY(-3px);
-    }
-  }
-}
+//   @include media(desktop) {
+//     &:hover {
+//       transform: translateY(-3px);
+//     }
+//   }
+// }
 
 .hidden {
   display: none;

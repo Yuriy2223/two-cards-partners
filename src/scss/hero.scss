@@ -1,28 +1,6 @@
 @use "./common/index" as *;
 
 .hero-section {
-  // background-image: url(/images/hero-bg-phone.png);
-  // background-size: cover;
-  // background-position: center;
-  // background-repeat: no-repeat;
-
-  @include media(desktop) {
-    // background-image: url(/images/hero-bg.png);
-  }
-}
-
-.hero-container {
-  margin: 0 auto;
-  max-width: 1920px;
-  padding-top: 60px;
-  height: 700px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  position: relative;
-
   background-image: url(/images/hero-bg-phone.png);
   background-size: cover;
   background-position: center;
@@ -30,7 +8,32 @@
 
   @include media(desktop) {
     background-image: url(/images/hero-bg.png);
-    height: 900px;
+  }
+}
+
+.hero-container {
+  position: relative;
+
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  height: 700px;
+  // max-width: 1920px;
+
+  // background-image: url(/images/hero-bg-phone.png);
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+
+  @include media(desktop) {
+    // background-image: url(/images/hero-bg.png);
+    // height: 900px;
+    width: clamp(1110px, 100vw, 1920px);
+    aspect-ratio: 1920 / 900;
+    max-height: 900px;
+
     padding-top: 330px;
   }
 }
@@ -54,20 +57,21 @@
   line-height: 1.2;
   text-align: center;
   white-space: nowrap;
-  background: linear-gradient(
-    90deg,
-    #d8940b 0%,
-    #eeb83a 35.1%,
-    #fff6a7 49.52%,
-    #dda41f 75.49%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 4px 5px 10px 0 rgba(244, 208, 100, 0.3);
+  // background: linear-gradient(
+  //   90deg,
+  //   #d8940b 0%,
+  //   #eeb83a 35.1%,
+  //   #fff6a7 49.52%,
+  //   #dda41f 75.49%
+  // );
+  // background-clip: text;
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
+  // text-shadow: 4px 5px 10px 0 rgba(244, 208, 100, 0.3);
 
   @include media(desktop) {
-    font-size: 70px;
+    // font-size: 70px;
+    font-size: clamp(64px, 2.5vw, 70px);
   }
 }
 .hero-text {
@@ -79,37 +83,40 @@
   color: #fff;
 
   @include media(desktop) {
-    font-family: var(--second-family);
     font-weight: 600;
-    font-size: 70px;
+    // font-size: 70px;
+    font-size: clamp(60px, 2.5vw, 70px);
+
     line-height: 120%;
     text-align: center;
     color: #fff;
   }
 }
 .btn-start {
-  font-family: $font-family;
   font-weight: 800;
   font-size: 15px;
-  color: #fff;
-  border: 2px solid rgba(255, 255, 255, 0.15);
   border-radius: 100px;
   width: 344px;
   height: 50px;
-  text-align: center;
-
   margin-top: 32px;
 
-  box-shadow: 0 0 30px 0 rgba(137, 53, 225, 0.5),
-    0 6px 30px 0 rgba(69, 5, 183, 0.4), 0 4px 4px 0 rgba(48, 0, 134, 0.3),
-    inset 4px 4px 10px 0 rgba(255, 255, 255, 0.45),
-    inset -6px -4px 10px 0 rgba(0, 0, 0, 0.45);
-  background: linear-gradient(135deg, #990aff 0%, #490eb7 100%);
-  transition: all 0.3s ease;
+  // font-family: $font-family;
 
-  &:hover {
-    transform: scale(0.96);
-  }
+  // color: #fff;
+  // border: 2px solid rgba(255, 255, 255, 0.15);
+
+  // text-align: center;
+
+  // box-shadow: 0 0 30px 0 rgba(137, 53, 225, 0.5),
+  //   0 6px 30px 0 rgba(69, 5, 183, 0.4), 0 4px 4px 0 rgba(48, 0, 134, 0.3),
+  //   inset 4px 4px 10px 0 rgba(255, 255, 255, 0.45),
+  //   inset -6px -4px 10px 0 rgba(0, 0, 0, 0.45);
+  // background: linear-gradient(135deg, #990aff 0%, #490eb7 100%);
+  // transition: all 0.3s ease;
+
+  // &:hover {
+  //   transform: scale(0.96);
+  // }
 
   @include media(desktop) {
     font-size: 20px;
