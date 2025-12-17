@@ -1,12 +1,17 @@
 @use "./common/index" as *;
 
-.commissions {
-  @include media(desktop) {
-  }
-}
+.commissions-smoke {
+  display: none;
 
-.commissions-container {
   @include media(desktop) {
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    bottom: -163px;
+    width: 1031px;
+    height: 577px;
+    z-index: -1;
   }
 }
 
@@ -37,11 +42,12 @@
   gap: 16px;
   padding: 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
+  border-right: 3px solid transparent;
   transition: all 0.3s ease;
 
   &:hover {
     background-color: #1c1f22;
+    border-right: 3px solid #8d43ff;
   }
 
   @include media(desktop) {

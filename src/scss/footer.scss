@@ -48,12 +48,13 @@
   font-size: 15px;
   line-height: 1.2;
 
-  color: #a855f7;
+  color: $color-white;
   text-decoration: none;
   transition: color 0.3s ease;
 
   &:hover {
-    color: #c084fc;
+    color: #a855f7;
+    text-decoration: underline;
   }
 }
 

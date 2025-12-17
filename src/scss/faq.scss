@@ -1,8 +1,25 @@
 @use "./common/index" as *;
 
-.faq {
+.faq-smoke {
+  display: none;
+
   @include media(desktop) {
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    left: 14px;
+    top: 27px;
+    width: 1176px;
+    height: 659px;
+    z-index: -1;
   }
+}
+
+.faq-subtitle {
+  font-family: $font-family;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 46px;
 }
 
 .faq-list {
@@ -39,18 +56,18 @@
 
 .faq-question-text {
   font-family: $font-family;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 18px;
   line-height: 1.4;
   color: $color-white;
 
   @include media(desktop) {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
 .faq-item.active .faq-question-text {
-  color: #8d43ff;
+  color: $color-primary;
 }
 
 .faq-icon {
@@ -84,7 +101,7 @@
 }
 
 .faq-item.active .faq-icon {
-  border-color: #8d43ff;
+  border-color: $color-primary;
 }
 
 .faq-answer {
@@ -118,27 +135,6 @@
   width: 343px;
   height: 50px;
   margin: 0 auto;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // font-family: $font-family;
-
-  // color: $color-white;
-  // border: 2px solid rgba(255, 255, 255, 0.15);
-
-  // box-shadow: 0 0 30px 0 rgba(137, 53, 225, 0.5),
-  //   0 6px 30px 0 rgba(69, 5, 183, 0.4), 0 4px 4px 0 rgba(48, 0, 134, 0.3),
-  //   inset 4px 4px 10px 0 rgba(255, 255, 255, 0.45),
-  //   inset -6px -4px 10px 0 rgba(0, 0, 0, 0.45);
-  // background: linear-gradient(135deg, #990aff 0%, #490eb7 100%);
-
-  // transition: all 0.3s ease;
-
-  // &:hover {
-  //   transform: translateY(-3px);
-  //   // box-shadow: 0 0 40px 0 rgba(137, 53, 225, 0.7),
-  //   //   0 8px 35px 0 rgba(69, 5, 183, 0.5);
-  // }
 
   @include media(desktop) {
     font-size: 20px;
