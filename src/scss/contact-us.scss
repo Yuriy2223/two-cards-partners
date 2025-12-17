@@ -1,20 +1,7 @@
 @use "./common/index" as *;
 
-.container-wrapper {
-  position: relative;
-  // height: 1232px;
-  height: 1397px;
-  margin: 0 auto;
-
-  display: flex;
-  justify-content: center;
-
+.contacts {
   @include media(desktop) {
-    // height: 1142px;
-    height: 1248px;
-    width: 100%;
-    max-width: 1920px;
-
     background-image: url(/images/contact-bg.png);
     background-size: cover;
     background-position: center;
@@ -22,29 +9,44 @@
   }
 }
 
+.contacts-container {
+  padding-bottom: 310px;
+  display: flex;
+  justify-content: center;
+
+  @include media(desktop) {
+    padding-bottom: 100px;
+    justify-content: start;
+  }
+}
+
 .contact-img-wrap {
   position: absolute;
   bottom: 0;
   right: 0;
+
+  @include media(desktop) {
+    bottom: 100px;
+    right: -370px;
+  }
 }
 .contact-img {
-  height: 100%;
-  width: 100%;
   object-fit: contain;
+  @include media(desktop) {
+    width: 1920px;
+    height: 1016px;
+  }
 }
 
 .contact-content {
   position: relative;
   z-index: 1;
-
   width: 343px;
   border-radius: 12px;
   padding: 24px 16px;
-
   display: flex;
   flex-direction: column;
   gap: 16px;
-
   background-color: #0d0a0f;
   border: 1px solid rgba(255, 255, 255, 0.1);
 
@@ -80,8 +82,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-left: 2px solid #8d43ff;
-  border-right: 2px solid #8d43ff;
+  border-left: 2px solid $color-primary;
+  border-right: 2px solid $color-primary;
   background-color: #30353b;
   border-radius: 8px;
   padding: 0 16px;
@@ -99,7 +101,6 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   gap: 8px;
   padding: 10px;
-
   font-family: $font-family;
   font-weight: 400;
   font-size: 15px;
@@ -158,7 +159,7 @@
   font-weight: 700;
   font-size: 15px;
   line-height: 1.4;
-  color: #8d43ff;
+  color: $color-primary;
   margin-bottom: 8px;
   margin-left: 4px;
 
@@ -166,6 +167,7 @@
     margin-bottom: 16px;
   }
 }
+
 .form-input,
 .form-textarea {
   width: 100%;
@@ -173,7 +175,6 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 1.4;
-
   color: $color-white;
   background: #252227;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -185,7 +186,7 @@
 
   &:focus {
     outline: none;
-    border-color: #8d43ff;
+    border-color: $color-primary;
   }
 }
 .form-input {
@@ -275,31 +276,11 @@
   }
 }
 .form-submit {
-  font-family: $font-family;
   font-weight: 800;
   font-size: 20px;
-  color: $color-white;
-  border: 2px solid rgba(255, 255, 255, 0.15);
   border-radius: 100px;
-
   width: 100%;
   height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  box-shadow: 0 0 30px 0 rgba(137, 53, 225, 0.5),
-    0 6px 30px 0 rgba(69, 5, 183, 0.4), 0 4px 4px 0 rgba(48, 0, 134, 0.3),
-    inset 4px 4px 10px 0 rgba(255, 255, 255, 0.45),
-    inset -6px -4px 10px 0 rgba(0, 0, 0, 0.45);
-  background: linear-gradient(135deg, #990aff 0%, #490eb7 100%);
-  transition: all 0.3s ease;
-
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 40px 0 rgba(137, 53, 225, 0.7),
-      0 8px 35px 0 rgba(69, 5, 183, 0.5);
-  }
 }
 
 .divider {
@@ -354,21 +335,10 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #990aff 0%, #490eb7 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease;
 
   svg {
     width: 24px;
     height: 24px;
-  }
-
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 40px 0 rgba(137, 53, 225, 0.7),
-      0 8px 35px 0 rgba(69, 5, 183, 0.5);
   }
 
   @include media(desktop) {

@@ -1,11 +1,18 @@
 @use "./common/index" as *;
 
-.goal {
-  // padding: 60px 0;
+.goal-smoke {
+  display: none;
 
-  // @include media(desktop) {
-  //   padding: 80px 0;
-  // }
+  @include media(desktop) {
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    bottom: -297px;
+    width: 1031px;
+    height: 577px;
+    z-index: -1;
+  }
 }
 
 .goal-container {
