@@ -11,7 +11,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     const header = document.querySelector("header");
     const headerHeight = header?.offsetHeight || 0;
 
-    const offset = targetElement.offsetTop - headerHeight - 10; // Враховуємо відступ
+    const offset = targetElement.offsetTop - headerHeight - 30;
 
     smoothScrollTo(window.scrollY, offset, 1800);
   });

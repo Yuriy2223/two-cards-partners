@@ -76,13 +76,62 @@ document.addEventListener("DOMContentLoaded", () => {
     if (errorElement) {
       errorElement.style.opacity = "0";
       errorElement.style.visibility = "hidden";
-
       setTimeout(() => {
         if (errorElement.style.opacity === "0") {
           errorElement.textContent = "";
         }
       }, 200);
     }
+  }
+
+  function showSuccessMessage() {
+    let successMessage = document.querySelector(".form-success-toast");
+
+    if (!successMessage) {
+      const overlay = document.createElement("div");
+      overlay.className = "form-success-overlay";
+      successMessage = document.createElement("div");
+      successMessage.className = "form-success-toast";
+
+      successMessage.innerHTML = `
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" fill="white"/>
+        </svg>
+        <h3>Success!</h3>
+        <p>Thank you! Your message has been sent successfully.<br>We'll get back to you soon.</p>
+      `;
+
+      document.body.appendChild(overlay);
+      document.body.appendChild(successMessage);
+      document.body.style.overflow = "hidden";
+    }
+
+    setTimeout(() => {
+      document.querySelector(".form-success-overlay").classList.add("show");
+      successMessage.classList.add("show");
+    }, 10);
+
+    setTimeout(() => {
+      hideSuccessMessage();
+    }, 4000);
+
+    document
+      .querySelector(".form-success-overlay")
+      .addEventListener("click", hideSuccessMessage);
+  }
+
+  function hideSuccessMessage() {
+    const overlay = document.querySelector(".form-success-overlay");
+    const message = document.querySelector(".form-success-toast");
+
+    if (overlay) overlay.classList.remove("show");
+    if (message) message.classList.remove("show");
+
+    setTimeout(() => {
+      if (overlay) overlay.remove();
+      if (message) message.remove();
+      document.body.style.overflow = "";
+    }, 300);
   }
 
   function validateField(input) {
@@ -175,7 +224,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       console.log("Form submitted:", formData);
 
-      // Відправити дані на сервер
+      showSuccessMessage();
+      form.reset();
+
+      // Mожна відправити дані на сервер
       // fetch('/api/contact', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
@@ -183,16 +235,13 @@ document.addEventListener("DOMContentLoaded", () => {
       // })
       // .then(response => response.json())
       // .then(data => {
-      //   alert('Form submitted successfully!');
+      //   showSuccessMessage();
       //   form.reset();
       // })
       // .catch(error => {
-      //   alert('Error submitting form');
+      //   console.error('Error:', error);
+      //   alert('Error submitting form. Please try again.');
       // });
-
-      // For demo
-      alert("Form submitted successfully!");
-      form.reset();
     } else {
       const firstError = form.querySelector(".error");
       if (firstError) {

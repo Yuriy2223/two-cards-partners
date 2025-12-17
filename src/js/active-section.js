@@ -4,7 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".header-section");
 
   function highlightActiveSection() {
-    const scrollY = window.scrollY;
+    let scrollY;
+    if (document.body.style.position === "fixed") {
+      scrollY = Math.abs(parseInt(document.body.style.top) || 0);
+    } else {
+      scrollY = window.scrollY;
+    }
+
     const headerHeight = header?.offsetHeight || 0;
 
     if (scrollY < 100) {
@@ -29,6 +35,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   window.addEventListener("scroll", highlightActiveSection);
+
+  const observer = new MutationObserver(() => {
+    highlightActiveSection();
+  });
+
+  const navMenu = document.querySelector(".header-nav");
+  if (navMenu) {
+    observer.observe(navMenu, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+  }
 
   highlightActiveSection();
 });

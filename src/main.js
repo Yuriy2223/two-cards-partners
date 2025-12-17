@@ -5,3 +5,4 @@ import "./js/scroll";
 import "./js/swiper";
 import "./js/faq";
 import "./js/cookie";
+import "./js/contact-form";
