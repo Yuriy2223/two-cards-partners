@@ -1,10 +1,5 @@
 @use "./common/index" as *;
 
-.testimonials {
-  @include media(desktop) {
-  }
-}
-
 .testimonials-smoke {
   display: none;
 

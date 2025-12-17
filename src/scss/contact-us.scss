@@ -343,8 +343,8 @@
       top: 8px;
       width: 8px;
       height: 4px;
-      border-left: 2px solid #fff;
-      border-bottom: 2px solid #fff;
+      border-left: 2px solid $color-white;
+      border-bottom: 2px solid $color-white;
       transform: rotate(-45deg);
       opacity: 0;
       transition: opacity 0.2s ease;
