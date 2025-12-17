@@ -16,14 +16,17 @@
 }
 
 .faq-subtitle {
-  font-family: $font-family;
-  font-size: 20px;
-  text-align: center;
   margin-bottom: 46px;
 }
 
 .faq-list {
   margin-bottom: 24px;
+}
+
+.faq-list-page {
+  @include media(desktop) {
+    padding: 0 20px;
+  }
 }
 
 .faq-item {
