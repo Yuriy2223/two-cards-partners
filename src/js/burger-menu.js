@@ -18,7 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.style.position = "";
       document.body.style.top = "";
       document.body.style.width = "";
-      window.scrollTo(0, parseInt(scrollY || "0") * -1);
+
+      if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY) * -1);
+      }
     }
   };
 
@@ -30,11 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   document.addEventListener("click", (event) => {
-    if (
-      !navMenu.contains(event.target) &&
-      !burgerMenu.contains(event.target) &&
-      !closeMenu.contains(event.target)
-    ) {
+    if (!navMenu.classList.contains("active")) return;
+
+    if (!navMenu.contains(event.target) && !burgerMenu.contains(event.target)) {
       toggleMenu(false);
     }
   });

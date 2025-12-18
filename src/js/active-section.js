@@ -3,14 +3,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".nav-link");
   const header = document.querySelector(".header-section");
 
-  function highlightActiveSection() {
-    let scrollY;
+  function getScrollPosition() {
     if (document.body.style.position === "fixed") {
-      scrollY = Math.abs(parseInt(document.body.style.top) || 0);
-    } else {
-      scrollY = window.scrollY;
+      return Math.abs(parseInt(document.body.style.top) || 0);
     }
 
+    return window.scrollY;
+  }
+
+  function highlightActiveSection() {
+    const scrollY = getScrollPosition();
     const headerHeight = header?.offsetHeight || 0;
 
     if (scrollY < 100) {
@@ -35,18 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   window.addEventListener("scroll", highlightActiveSection);
-
-  const observer = new MutationObserver(() => {
-    highlightActiveSection();
-  });
-
-  const navMenu = document.querySelector(".header-nav");
-  if (navMenu) {
-    observer.observe(navMenu, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-  }
 
   highlightActiveSection();
 });
