@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/webp" href="/favicon.webp" />
+    <link rel="icon" type="image/webp" href="/two-cards-partners/assets/favicon-CMGOyKcJ.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,8 +11,8 @@
       rel="stylesheet"
     />
     <title>TwoCards Partners</title>
-    <script type="module" crossorigin src="/two-cards-partners/assets/main-B6xxeaOA.js"></script>
-    <link rel="stylesheet" crossorigin href="/two-cards-partners/assets/main-JivVTTCS.css">
+    <script type="module" crossorigin src="/two-cards-partners/assets/main-DM-oIP4e.js"></script>
+    <link rel="stylesheet" crossorigin href="/two-cards-partners/assets/main-B6KGSKE5.css">
   </head>
   <body>
     <section class="header-section">
@@ -559,53 +559,66 @@
         </div>
       </div>
 
-      <form class="contact-form">
+      <form class="contact-form" id="contactForm" novalidate>
         <div class="form-group">
-          <label class="form-label">Name</label>
+          <label class="form-label" for="name">Name</label>
           <input
             type="text"
+            id="name"
+            name="name"
             class="form-input"
             placeholder="Enter your name"
             required
+            minlength="2"
+            maxlength="50"
           />
+          <span class="form-error"></span>
         </div>
-
         <div class="form-group">
-          <label class="form-label">E-mail</label>
+          <label class="form-label" for="email">E-mail</label>
           <input
             type="email"
+            id="email"
+            name="email"
             class="form-input"
             placeholder="Enter your e-mail"
             required
           />
+          <span class="form-error"></span>
         </div>
-
         <div class="form-group">
-          <label class="form-label">Telegram</label>
+          <label class="form-label" for="telegram">Telegram</label>
           <input
             type="text"
+            id="telegram"
+            name="telegram"
             class="form-input"
             placeholder="Enter your telegram"
+            pattern="^@?[a-zA-Z0-9_]{5,32}$"
           />
+          <span class="form-error"></span>
         </div>
-
         <div class="form-group">
-          <label class="form-label">Leave a message</label>
+          <label class="form-label" for="message">Leave a message</label>
           <textarea
+            id="message"
+            name="message"
             class="form-textarea"
             placeholder="Enter your message"
+            minlength="10"
+            maxlength="500"
           ></textarea>
+          <span class="form-error"></span>
         </div>
-
         <div class="form-checkbox">
-          <input type="checkbox" id="consent" required />
+          <input type="checkbox" id="consent" name="consent" required />
           <label for="consent">
             I consent to TwoCards Partners storing my personal data provided for
             the sole purpose of responding to my enquiry and administering my
             request
           </label>
+          <span class="form-error"></span>
         </div>
-
         <button type="submit" class="btn-primary form-submit">Send</button>
       </form>
 
