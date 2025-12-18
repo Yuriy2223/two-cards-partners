@@ -23,7 +23,6 @@
   background: linear-gradient(0deg, #1c1f22 0%, rgba(28, 31, 34, 0.02) 100%);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-
   padding: 24px 16px 0;
 
   @include media(desktop) {
@@ -48,7 +47,6 @@
 }
 
 .goal-wrapper-img {
-  // width: 100%;
   @include media(desktop) {
     position: absolute;
     width: 410px;
@@ -57,5 +55,3 @@
     top: auto;
   }
 }
-// .goal-img {
-// }

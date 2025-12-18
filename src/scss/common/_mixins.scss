@@ -23,12 +23,3 @@
     }
   }
 }
-
-// @mixin font($_fsz, $_lnh) {
-//   font-size: #{$_fsz}px;
-
-//   $line-height-ratio: math.div($_lnh, $_fsz);
-//   $rounded-ratio: math.round($line-height-ratio * 100) / 100;
-
-//   line-height: $rounded-ratio;
-// }

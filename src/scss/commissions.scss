@@ -43,7 +43,7 @@
 
   &:hover {
     background-color: #1c1f22;
-    border-right: 3px solid #8d43ff;
+    border-right: 3px solid $color-primary;
   }
 
   @include media(desktop) {
