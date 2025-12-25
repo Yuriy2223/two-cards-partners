@@ -13,6 +13,10 @@ const testimonialSwiper = new Swiper(".testimonials-swiper", {
     prevEl: ".swiper-button-prev",
   },
   breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
     1110: {
       slidesPerView: 3,
       spaceBetween: 20,

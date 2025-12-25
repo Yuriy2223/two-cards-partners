@@ -18,7 +18,7 @@
 .header-container {
   width: 100%;
   min-width: 320px;
-  max-width: 1920px;
+  max-width: 375px;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -26,8 +26,16 @@
   align-items: center;
   padding: 12px 30px;
 
+  @include media(tablet) {
+    min-width: 768px;
+    max-width: 768px;
+    padding: 20px 40px;
+  }
+
   @include media(desktop) {
     padding: 20px 34px;
+    min-width: 1110px;
+    max-width: 1920px;
   }
 }
 
@@ -236,7 +244,7 @@
 
     &:hover {
       color: $color-primary;
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba($color-white, 0.1);
     }
   }
 }
