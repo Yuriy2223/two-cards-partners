@@ -30,11 +30,11 @@
 }
 
 .faq-item {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba($color-white, 0.1);
   padding: 16px 0px;
 
   &:first-child {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba($color-white, 0.1);
   }
 
   @include media(desktop) {
@@ -75,7 +75,7 @@
   height: 24px;
   border-radius: 8px;
   padding: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba($color-white, 0.1);
   box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.2);
   background: #1c1f22;
   display: flex;

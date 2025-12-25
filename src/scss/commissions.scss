@@ -28,7 +28,7 @@
 .commissions-list {
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba($color-white, 0.1);
   border-radius: 16px;
   overflow: hidden;
 }
@@ -37,7 +37,7 @@
   display: flex;
   gap: 16px;
   padding: 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba($color-white, 0.1);
   border-right: 3px solid transparent;
   transition: all 0.3s ease;
 
@@ -106,8 +106,8 @@
 .commissions-footer {
   margin-top: 40px;
   text-align: center;
-  border-top: 1px solid #d8940b;
-  border-bottom: 1px solid #d8940b;
+  border-top: 1px solid $color-gold;
+  border-bottom: 1px solid $color-gold;
   padding: 16px;
 
   @include media(desktop) {

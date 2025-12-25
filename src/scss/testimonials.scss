@@ -30,7 +30,7 @@
 }
 
 .testimonials-slide {
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba($color-white, 0.1);
   border-radius: 16px;
   padding: 24px 16px;
   background: linear-gradient(0deg, #1c1f22 0%, rgba(28, 31, 34, 0.02) 100%);
@@ -73,7 +73,7 @@
 }
 
 .testimonials-logo {
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba($color-white, 0.1);
   border-radius: 12px;
   padding: 16px 20px;
   width: 140px;
@@ -108,7 +108,7 @@
     position: absolute !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba($color-white, 0.1);
     border-radius: 100px;
     width: 40px !important;
     height: 40px !important;

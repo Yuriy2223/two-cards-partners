@@ -20,11 +20,19 @@
   padding-top: 60px;
   height: 700px;
 
+  @include media(tablet) {
+    width: 768px;
+    padding-top: 238px;
+  }
+
   @include media(desktop) {
     width: clamp(1110px, 100vw, 1920px);
     aspect-ratio: 1920 / 900;
+    height: auto;
+    min-height: 700px;
     max-height: 900px;
-    padding-top: 330px;
+    padding-top: clamp(252px, 19cqw, 330px);
+    container-type: inline-size;
   }
 }
 
@@ -49,7 +57,7 @@
   white-space: nowrap;
 
   @include media(desktop) {
-    font-size: clamp(64px, 2.5vw, 70px);
+    font-size: clamp(46px, 3.6cqw, 70px);
   }
 }
 
@@ -62,7 +70,7 @@
 
   @include media(desktop) {
     font-weight: 600;
-    font-size: clamp(60px, 2.5vw, 70px);
+    font-size: clamp(46px, 3.6cqw, 70px);
     line-height: 1.2;
     text-align: center;
   }
@@ -90,6 +98,10 @@
   right: 50%;
   transform: translate(50%, -50%);
 
+  @include media(tablet) {
+    top: 36%;
+  }
+
   @include media(desktop) {
     top: 0;
     right: 0;
@@ -103,9 +115,14 @@
   width: 312px;
   height: 250px;
 
+  @include media(tablet) {
+    height: 750px;
+    width: 540px;
+    object-fit: contain;
+  }
+
   @include media(desktop) {
     height: 100%;
     width: 100%;
-    object-fit: contain;
   }
 }
